@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTBT</title>
+    <title>MTBPLUS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-mode">
     <div class="container">
-        <h1>Convertisseur de Mètres en Hauteur de Big Mac et Big Tasty (V1)</h1>
+        <h1>Convertisseur de Mètres en Hauteur de Produits Macdo (v2)</h1>
         <div class="input-group">
             <input type="number" id="metersInput" placeholder="Entrez la hauteur en mètres" oninput="convertFromMeters()">
             <span>Mètres</span>
+        </div>
+        <div class="input-group">
             <input type="number" id="foodInput" placeholder="Entrez le nombre" oninput="convertFromFood()">
-            <span id="unitLabel">Big Mac</span>
+            <span id="unitLabel">Produit</span>
         </div>
         <div class="switch-group">
             <label for="unitSelect">Unité :</label>
             <select id="unitSelect" onchange="convertFromMeters()">
-                <option value="bigMac">Big Mac</option>
-                <option value="bigTasty">Big Tasty</option>
+                <!-- Options will be populated by JavaScript -->
             </select>
         </div>
         <p id="result"></p>
         <!--<button id="themeToggle">Mode Clair</button>-->
+        <a href="faq.html" class="faq-button">FAQ</a>
     </div>
     <script src="script.js"></script>
 </body>

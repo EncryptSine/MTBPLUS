@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+            "name": "Big Mac",
+            "heightCm": 8
+        },
+        {
+            "name": "Big Tasty",
+            "heightCm": 7
+        }
+    ]
+}
