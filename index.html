@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTBPLUS</title>
+    <title>MTBPLUS – Mètres en Macdo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-mode">
-    <div class="container">
-        <h1>Convertisseur de Mètres en Hauteur de Produits Macdo (v2)</h1>
-        <div class="input-group">
-            <input type="number" id="metersInput" placeholder="Entrez la hauteur en mètres" oninput="convertFromMeters()">
-            <span>Mètres</span>
-        </div>
-        <div class="input-group">
-            <input type="number" id="foodInput" placeholder="Entrez le nombre" oninput="convertFromFood()">
-            <span id="unitLabel">Produit</span>
-        </div>
-        <div class="switch-group">
-            <label for="unitSelect">Unité :</label>
-            <select id="unitSelect" onchange="convertFromMeters()">
-                <!-- Options will be populated by JavaScript -->
-            </select>
-        </div>
-        <p id="result"></p>
-        <!--<button id="themeToggle">Mode Clair</button>-->
-        <a href="html/faq.html" class="faq-button">FAQ</a>
-    </div>
+<body>
+    <header class="topbar">
+        <span class="brand">MTBPLUS</span>
+        <span class="tag">Mètres &rarr; Macdo</span>
+    </header>
+
+    <main class="container">
+        <h1>Ça fait combien de Macdo&nbsp;?</h1>
+
+        <form class="panel" onsubmit="return false">
+            <div class="row">
+                <label for="metersInput">Hauteur</label>
+                <input type="number" id="metersInput" min="0" step="any" inputmode="decimal" placeholder="0">
+                <span class="unit">m</span>
+            </div>
+
+            <div class="row">
+                <label for="foodInput">Quantité</label>
+                <input type="number" id="foodInput" min="0" step="any" inputmode="decimal" placeholder="0">
+                <span class="unit" id="unitLabel">Produit</span>
+            </div>
+
+            <div class="row">
+                <label for="unitSelect">Produit</label>
+                <select id="unitSelect"></select>
+            </div>
+
+            <p id="result" class="result" aria-live="polite"></p>
+        </form>
+
+        <p class="note">Hauteurs approximatives, à titre indicatif.</p>
+    </main>
+
+    <script src="products.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
